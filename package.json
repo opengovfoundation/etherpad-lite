@@ -5,7 +5,7 @@
   "keywords": [],
   "dependencies": {
     "ep_comments_page": "~0.0.32",
-    "ep_context": "JohnMcLear/ep_context#resolution-big-button",
+    "ep_context": "JohnMcLear/ep_context#master",
     "ep_copypad": "redhog/ep_copypad#ogfbranch",
     "ep_mammoth": "~0.0.7",
     "ep_page_view": "~0.5.22",
