@@ -8,7 +8,7 @@
     "ep_context": "JohnMcLear/ep_context#master",
     "ep_copypad": "redhog/ep_copypad#ogfbranch",
     "ep_mammoth": "~0.0.7",
-    "ep_page_view": "~0.5.22",
+    "ep_page_view": "~0.5.23",
     "ep_table_of_contents": "JohnMcLear/ep_table_of_contents#resolution",
     "ep_xmlexport": "~2.1.4"
   },
