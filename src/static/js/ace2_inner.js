@@ -2903,6 +2903,7 @@ function Ace2Inner(){
 
       hooks.callAll('aceSelectionChanged', {
         rep: rep,
+        callstack: currentCallStack,
         documentAttributeManager: documentAttributeManager,
       });
 
@@ -3641,12 +3642,6 @@ function Ace2Inner(){
     var altKey = evt.altKey;
     var shiftKey = evt.shiftKey;
 
-    // prevent ESC key
-    if (keyCode == 27)
-    {
-      evt.preventDefault();
-      return;
-    }
     // Is caret potentially hidden by the chat button?
     var myselection = document.getSelection(); // get the current caret selection
     var caretOffsetTop = myselection.focusNode.parentNode.offsetTop | myselection.focusNode.offsetTop; // get the carets selection offset in px IE 214
@@ -3715,7 +3710,12 @@ function Ace2Inner(){
           documentAttributeManager: documentAttributeManager,
           evt:evt
         });
-        specialHandled = (specialHandledInHook&&specialHandledInHook.length>0)?specialHandledInHook[0]:specialHandled;
+
+        // if any hook returned true, set specialHandled with true
+        if (specialHandledInHook) {
+          specialHandled = _.contains(specialHandledInHook, true);
+        }
+
         if ((!specialHandled) && altKey && isTypeForSpecialKey && keyCode == 120){
           // Alt F9 focuses on the File Menu and/or editbar.
           // Note that while most editors use Alt F10 this is not desirable
@@ -3837,6 +3837,15 @@ function Ace2Inner(){
           {
             outerWin.scrollBy(-100, 0);
           }, 0);
+          specialHandled = true;
+        }
+        if ((!specialHandled) && isTypeForSpecialKey && keyCode == 27)
+        {
+          // prevent esc key;
+          // in mozilla versions 14-19 avoid reconnecting pad.
+
+          fastIncorp(4);
+          evt.preventDefault();
           specialHandled = true;
         }
         if ((!specialHandled) && isTypeForCmdKey && String.fromCharCode(which).toLowerCase() == "s" && (evt.metaKey || evt.ctrlKey) && !evt.altKey) /* Do a saved revision on ctrl S */
@@ -4987,6 +4996,13 @@ function Ace2Inner(){
       if(e.target.a || e.target.localName === "a"){
         e.preventDefault();
       }
+
+      // Call paste hook
+      hooks.callAll('acePaste', {
+        editorInfo: editorInfo,
+        rep: rep,
+        documentAttributeManager: documentAttributeManager
+      });
     })
 
     // CompositionEvent is not implemented below IE version 8
