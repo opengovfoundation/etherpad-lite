@@ -1,6 +1,7 @@
 node_modules
 credentials.json
 !settings.json.template
+dirty.db
 APIKEY.txt
 SESSIONKEY.txt
 bin/abiword.exe
