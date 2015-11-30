@@ -1,5 +1,5 @@
 node_modules
-settings.json
+credentials.json
 !settings.json.template
 APIKEY.txt
 SESSIONKEY.txt
