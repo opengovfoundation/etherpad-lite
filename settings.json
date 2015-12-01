@@ -31,7 +31,7 @@
   */
 
   //the default text of a pad
-  "defaultPadText" : "Welcome to Etherpad!\n\nThis pad text is synchronized as you type, so that everyone viewing this page sees the same text. This allows you to collaborate seamlessly on documents!\n\nGet involved with Etherpad at http:\/\/etherpad.org\n",
+  "defaultPadText" : "",
 
   /* Default Pad behavior, users can override by changing */
   "padOptions": {
