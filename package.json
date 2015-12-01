@@ -5,11 +5,12 @@
   "keywords": [],
   "dependencies": {
     "ep_api_auth": "opengovfoundation/ep_api_auth#master",
+    "ep_better_pdf_export": "0.0.1",
     "ep_comments_page": "~0.0.32",
     "ep_context": "JohnMcLear/ep_context#master",
     "ep_copypad": "redhog/ep_copypad#ogfbranch",
-    "ep_extend_settings": "0.0.1",
     "ep_disable_change_author_name": "~0.0.2",
+    "ep_extend_settings": "0.0.1",
     "ep_mammoth": "~0.0.7",
     "ep_page_view": "~0.5.23",
     "ep_print_preview_pdf": "0.0.1",
