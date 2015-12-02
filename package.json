@@ -15,7 +15,7 @@
     "ep_print_preview_pdf": "0.0.1",
     "ep_spellcheck": "0.0.3",
     "ep_table_of_contents": "JohnMcLear/ep_table_of_contents#resolution",
-    "ep_timesliderdiff": "0.0.3",
+    "ep_timesliderdiff": "0.0.5",
     "ep_xmlexport": "~2.1.4"
   },
   "devDependencies": {},
