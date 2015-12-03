@@ -48,6 +48,9 @@
     "lang": "en-gb"
   },
 
+  /* Default the page view setting to true.  This is necessary to see the context indicators */
+  "ep_page_view_default" : true,
+
   /* Should we suppress errors from being visible in the default Pad Text? */
   "suppressErrorsInPadText" : false,
 
