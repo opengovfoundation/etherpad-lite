@@ -5001,9 +5001,26 @@ function Ace2Inner(){
       hooks.callAll('acePaste', {
         editorInfo: editorInfo,
         rep: rep,
-        documentAttributeManager: documentAttributeManager
+        documentAttributeManager: documentAttributeManager,
+        e: e
       });
     })
+
+
+    $(root).on("drop", function(e){
+      if(e.target.a || e.target.localName === "a"){
+        e.preventDefault();
+      }
+
+      // Call drop hook
+      hooks.callAll('aceDrop', {
+        editorInfo: editorInfo,
+        rep: rep,
+        documentAttributeManager: documentAttributeManager,
+        e: e
+      });
+    });
+
 
     // CompositionEvent is not implemented below IE version 8
     if ( !(browser.msie && parseInt(browser.version <= 9)) && document.documentElement)
