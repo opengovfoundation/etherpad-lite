@@ -14,21 +14,6 @@
   //IP and port which etherpad should bind at
   "ip": "0.0.0.0",
   "port" : 9000,
-  
-  /*
-  // Node native SSL support
-  // this is disabled by default
-  //
-  // make sure to have the minimum and correct file access permissions set
-  // so that the Etherpad server can access them
-
-  "ssl" : {
-            "key"  : "/path-to-your/epl-server.key",
-            "cert" : "/path-to-your/epl-server.crt",
-            "ca": ["/path-to-your/epl-intermediate-cert1.crt", "/path-to-your/epl-intermediate-cert2.crt"]
-          },
-
-  */
 
   //the default text of a pad
   "defaultPadText" : "",
@@ -65,15 +50,11 @@
 
   /* if true, all css & js will be minified before sending to the client. This will improve the loading performance massivly,
      but makes it impossible to debug the javascript/css */
-  "minify" : true,
+  "minify" : false,
 
   /* How long may clients use served javascript code (in seconds)? Without versioning this
      may cause problems during deployment. Set to 0 to disable caching */
   "maxAge" : 21600, // 60 * 60 * 6 = 6 hours
-  
-  /* This is the absolute path to the soffice executable. Setting it to null, disables LibreOffice exporting.
-     LibreOffice can be used in lieu of Abiword to export pads */
-  "soffice" : null,
 
   /* This is the path to the Tidy executable. Setting it to null, disables Tidy.
      Tidy is used to improve the quality of exported pads*/
@@ -121,24 +102,24 @@
   "indentationOnNewLine": false,
   */
 
-  /* The toolbar buttons configuration.
+  //The toolbar buttons configuration.
   "toolbar": {
     "left": [
-      ["bold", "italic", "underline", "strikethrough"],
-      ["orderedlist", "unorderedlist", "indent", "outdent"],
+      //["bold", "italic", "underline", "strikethrough"],
+      //["orderedlist", "unorderedlist", "indent", "outdent"],
       ["undo", "redo"],
-      ["clearauthorship"]
+      //["clearauthorship"]
     ],
     "right": [
       ["importexport", "timeslider", "savedrevision"],
-      ["settings", "embed"],
+      ["settings"],
       ["showusers"]
     ],
     "timeslider": [
       ["timeslider_export", "timeslider_returnToPad"]
     ]
   },
-  */
+
 
   /* The log level we are using, can be: DEBUG, INFO, WARN, ERROR */
   "loglevel": "INFO",
