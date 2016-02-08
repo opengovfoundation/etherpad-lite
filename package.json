@@ -6,6 +6,7 @@
   "dependencies": {
     "ep_api_auth": "opengovfoundation/ep_api_auth#master",
     "ep_better_pdf_export": "opengovfoundation/ep_better_pdf_export#master",
+    "ep_post_message": "opengovfoundation/ep_post_message#master",
     "ep_comments_page": "~0.0.32",
     "ep_context": "JohnMcLear/ep_context#master",
     "ep_copypad": "redhog/ep_copypad#ogfbranch",

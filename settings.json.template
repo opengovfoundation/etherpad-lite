@@ -205,5 +205,11 @@
           }
         }*/
       ]
+    },
+    "extendedSettings" : "credentials.json",
+    "ep_post_message": {
+      // Set domains that this etherpad instance will be framed inside of
+      // for message sending between the iframes.
+      "domains": ["http://editor.domain.here"]
     }
 }
